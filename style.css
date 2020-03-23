@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+	font-size: 16px;
+	--bg-color: #fefefe;
+	--header-color: #707070;
+	--theme-color: #079fc5;
+	--hover-color: #038bad;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 1rem;
+	font-family: 'Muli', sans-serif;
+	background: var(--bg-color);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+}
+
+main {
+	flex: 2;
+}
+
+h1 {
+	color: var(--theme-color);
+}
+
+p,
+a,
+span {
+	color: var(--header-color);
+}
+
+button {
+	outline: none;
+	background: var(--theme-color);
+	border: none;
+	border-radius: 0.8rem;
+	padding: 0.8rem;
+	color: var(--bg-color);
+	font-weight: bold;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	box-shadow: 0 0 0.2rem var(--hover-color);
+}
+
+button:hover {
+	background: var(--hover-color);
+}
+
+input {
+	outline: none;
+	background: #fff;
+	border: 0.1rem solid var(--header-color);
+	border-radius: 0.8rem;
+	padding: 0.8rem;
+}
+
+output {
+	color: var(--theme-color);
+	border-bottom: 0.1rem solid var(--theme-color);
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form input {
+	flex: 1;
+	text-align: center;
+}
+
+form input:first-child {
+	margin-right: 0.8rem;
+}
+
+form input:last-child {
+	margin-left: 0.8rem;
+}
+
+form button {
+	margin: 0.8rem 0;
+	min-width: 100%;
+}
+
+table {
+	width: 100%;
+	border: 0.1rem solid var(--header-color);
+	border-radius: 0.8rem;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0.5rem 1rem;
+	text-align: center;
+	border: none;
+	transition: all 0.2s ease-in-out;
+}
+
+footer {
+	text-align: center;
+}
+
+footer a {
+	text-decoration: none;
+	margin: 0 1rem;
+	transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+	color: var(--hover-color);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	height: 5rem;
+}
+
+.result {
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 2rem 0 1rem 0;
+}
+
+@media (max-width: 440px) {
+	form input:first-child {
+		margin-right: 0;
+		margin-bottom: 0.4rem;
+	}
+
+	form input:last-child {
+		margin-left: 0;
+	}
+
+	.info {
+		height: 6rem;
+	}
+
+	.info span {
+		text-align: center;
+	}
+}

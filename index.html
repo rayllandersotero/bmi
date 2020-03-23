@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="canonical" href="https://www.localhost" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="BMI Calculator" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="BMI Calculator" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:title" content="BMI Calculator" />
+    <meta property="og:description" content="BMI Calculator" />
+    <!-- <meta property="og:url" content="https://www.localhost" /> -->
+    <meta itemprop="name" content="BMI Calculator" />
+    <meta itemprop="description" content="BMI Calculator" />
+    <!-- <meta itemprop="url" content="https://www.localhost" /> -->
+</head>
+
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
+
+    <main>
+        <div class="info">
+            <span>Choose your unit and type your weight and height below:</span>
+            <button type="button" id="trade" class="notranslate" data-metric="m">in</button>
+        </div>
+
+        <form>
+            <input type="text" id="weight" placeholder="kg" autocomplete="off" autofocus required />
+            <input type="text" id="height" placeholder="m" autocomplete="off" required />
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div class="result">
+            <span>Your BMI is:</span>
+            <output type="number" id="bmi" disabled readonly></output>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Result</th>
+                    <th>Situation</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr data-result-min="0" data-result-max="16.99">
+                    <td>Less than 17</td>
+                    <td>Far Underweight</td>
+                </tr>
+
+                <tr data-result-min="17" data-result-max="18.49">
+                    <td>17 ~ 18.4</td>
+                    <td>Underweight</td>
+                </tr>
+
+                <tr data-result-min="18.5" data-result-max="24.99">
+                    <td>18.5 ~ 24.9</td>
+                    <td>Normal Weight</td>
+                </tr>
+
+                <tr data-result-min="25" data-result-max="29.99">
+                    <td>25 ~ 29.9</td>
+                    <td>Overweight</td>
+                </tr>
+
+                <tr data-result-min="30" data-result-max="34.99">
+                    <td>30 ~ 34.9</td>
+                    <td>Obesity</td>
+                </tr>
+
+                <tr data-result-min="35" data-result-max="39.99">
+                    <td>35 ~ 39.9</td>
+                    <td>Severe Obesity</td>
+                </tr>
+
+                <tr data-result-min="40" data-result-max="100">
+                    <td>More than 40</td>
+                    <td>Morbid Obesity</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <a href="https://github.com/rayllandersotero" target="_blank" title="Author">@rayllandersotero</a>
+        <a href="https://github.com/rayllandersotero" target="_blank" title="Source code">Github</a>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
